@@ -1,8 +1,9 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
+
 
 .App {
   max-width: 600px;
