@@ -14,7 +14,10 @@ export default function BFHLFrontend() {
     setErrorMessage("");
     try {
       const dataToSend = {
-        data: [...numbers.split(",").map(num => num.trim()), ...alphabets.split(",").map(alpha => alpha.trim())]
+        data: [
+          ...numbers.split(",").map(num => num.trim()).filter(num => num !== ""),
+          ...alphabets.split(",").map(alpha => alpha.trim()).filter(alpha => alpha !== "")
+        ]
       };
       
       const res = await fetch(apiUrl, {
